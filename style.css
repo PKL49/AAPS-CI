@@ -1,0 +1,201 @@
+.flex-row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 0.5rem;
+    }
+    .right-button {
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    .right-button {
+      background: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      padding: 0.45rem 1.1rem;
+      box-shadow: 0 1.5px 6px rgba(26, 115, 232, 0.10);
+      transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    }
+    .right-button:hover {
+      background: #1765c1;
+      box-shadow: 0 3px 12px rgba(26, 115, 232, 0.16);
+      transform: translateY(-1px) scale(1.04);
+    }
+    .right-button:active {
+      background: #1558a6;
+      box-shadow: 0 1px 2px rgba(26, 115, 232, 0.10);
+      transform: scale(0.97);
+    }
+    .label-no-margin {
+      margin-bottom: 0;
+    }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9f9f9; color: #333; margin: 0; padding: 1rem; }
+    .container { max-width: 800px; margin: auto; background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative; }
+    h2 { color: #1a73e8; display: flex; align-items: center; gap: 0.5rem; }
+    input[type=text], textarea { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; }
+    .styled-input { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #ccc; border-radius: 4px; background-color: #f8f9fa; font-size: 0.9rem; }
+    button { padding: 0.5rem 1rem; background: #0077cc; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:active{ background: #005fa3; }
+    .btn-green {
+      background: #27ae60 !important;
+      color: #fff !important;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(39, 174, 96, 0.12);
+      transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    }
+    .btn-green:hover {
+      background: #219150 !important;
+      box-shadow: 0 4px 16px rgba(39, 174, 96, 0.18);
+      transform: translateY(-1.5px) scale(1.03);
+    }
+    .btn-green:active {
+      background: #1e7e45 !important;
+      box-shadow: 0 1px 2px rgba(39, 174, 96, 0.10);
+      transform: scale(0.98);
+    }
+    .field-group { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .field-group .right-button { margin-left: auto; }
+    .button-group { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }
+    .full-width-btn { width: 100%; margin-top: 0.5rem; }
+    .auth-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin: 0.5rem 0; }
+    .auth-controls .custom-client { flex-basis: 100%; display: none; }
+    @media (min-width: 600px) {
+      .auth-controls .custom-client { flex-basis: auto; display: none; }
+    }
+    .copy-right {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .toast {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #34a853;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        font-weight: 500;
+        display: none;
+        z-index: 1000;
+    }
+    
+    /* 新增的步驟樣式 */
+    .option {
+        margin-bottom: 24px;
+        border: 1px solid #dadce0;
+        border-radius: 8px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    
+    .option.active {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        border-color: #1a73e8;
+    }
+    
+    .option-header {
+        padding: 16px 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        background-color: white;
+        transition: background-color 0.2s ease;
+        border-bottom: 1px solid transparent;
+    }
+    
+    .option.active .option-header {
+        border-bottom-color: #dadce0;
+        background-color: #e8f0fe;
+    }
+    
+    .option-header:hover {
+        background-color: #f8f9fa;
+    }
+    
+    .option-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+        padding: 0 20px;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+    .option.active .option-content {
+        max-height: 2000px;
+        padding: 24px 20px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* 移除的內聯樣式 */
+    .version-badge {
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        background: #e3eafc;
+        color: #1a73e8;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 4px 12px;
+        border-radius: 6px;
+        z-index: 10;
+        box-shadow: 0 1px 4px rgba(26,115,232,0.07);
+        max-width: calc(100% - 32px);
+    }
+    
+    #langSelector {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        padding: 0.3rem 0.5rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+    
+    .header-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+    
+    .logo {
+        height: 120px;
+    }
+
+    .keystore-input {
+        flex: 1 1 auto;
+        min-width: 200px;
+    }
+    
+    .main-title {
+        font-size: 1.5rem;
+        color: #1a73e8;
+        margin: 0;
+        margin-left: -10px;
+    }
+
+    .icon-drive {
+        height: 24px;
+        vertical-align: middle;
+        margin-right: 6px;
+    }
+    #jksFile{
+      margin-top: 10px;
+      padding-bottom: 10px;
+    }
